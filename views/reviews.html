@@ -1,0 +1,24 @@
+
+<div class='text'>
+  <div class="titlebar">
+      <center><a ui-sref="activities"><button class="backbutton">Back to search</button></a></center>
+  </div>
+<br>
+  <div class="reviews">
+        <h3>Write a review:</h3>
+        <div>
+            <strong>Subject: </strong><input type="text" class="subject_input" ng-model="subject">
+            <br>
+            <br>
+            <textarea name="name" rows="9" cols="100" class="review_box" ng-model="review"></textarea>
+            <br>
+            <strong>Review By: </strong><input type="text" class="person" ng-model="person">
+            <button class="review-button" ng-click='postMessage({subject, review, person})'>Submit</button>
+        </div>
+        <div class="scroll" ng-repeat='review in reviews'>
+          <p><strong>Subject:</strong> {{review.subject}}
+          <br><strong>Review:</strong> {{review.review}}
+          <br><strong>Review By:</strong> {{review.person}}</p>
+</div>
+</div>
+    </div>
